@@ -27,9 +27,7 @@ public class LaptopController {
 
     @GetMapping("/saludo")
     public String saludo(){
-        String mensaje = "Perfil: "+ entorno+ "\nEntorno: "+miVarEnv;
-        System.out.println(entorno);
-        return mensaje;
+        return "Perfil: "+ entorno+ "\nSistema Operativo: "+miVarEnv;
     }
     @Operation(summary = "Buscar todos los Laptops")
     @GetMapping

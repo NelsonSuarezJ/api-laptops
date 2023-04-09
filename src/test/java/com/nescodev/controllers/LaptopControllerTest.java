@@ -41,7 +41,7 @@ class LaptopControllerTest {
         mockMvc.perform(get(END_POINT_BASE).contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$[0].marca").value("Hp"));
+                .andExpect(jsonPath("$[0].marca").value("MAC1"));
     }
 
     @Test
