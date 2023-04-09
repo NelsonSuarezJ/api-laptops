@@ -24,6 +24,13 @@ public class LaptopController {
     public LaptopController(LaptopService laptopService) {
         this.laptopService = laptopService;
     }
+
+    @GetMapping("/saludo")
+    public String saludo(){
+        String mensaje = "Perfil: "+ entorno+ "\nEntorno: "+miVarEnv;
+        System.out.println(entorno);
+        return mensaje;
+    }
     @Operation(summary = "Buscar todos los Laptops")
     @GetMapping
     public List<Laptop> findAll() {
@@ -53,7 +60,5 @@ public class LaptopController {
     @DeleteMapping
     public void deleteAll(){
         laptopService.eliminarTodos();
-        System.out.println(entorno);
-        System.out.println(miVarEnv);
     }
 }
