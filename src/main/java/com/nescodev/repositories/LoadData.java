@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 @Profile("dev")
 public class LoadData {
 
@@ -14,7 +14,7 @@ public class LoadData {
         this.laptopRepository = laptopRepository;
     }
 
-    @Bean
+//    @Bean
     public void cargarDatos(){
         laptopRepository.save(new Laptop("Hp",14f,4));
         laptopRepository.save(new Laptop("Mac",13f,8));

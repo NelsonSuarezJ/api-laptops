@@ -17,7 +17,7 @@ public class Application {
 	@Bean
 	public OpenAPI customAPI (){
 		return new OpenAPI()
-				.info(new Info().title("Laptops API").description("API de Laptos con CRUD").version("1.0.0")
+				.info(new Info().title("Laptops API").description("API de Laptops con CRUD").version("1.0.0")
 						.contact(new Contact().name("Nelson Suarez").email("nelson.sj@hotmail.com"))
 						.license(new License().name("Apache 2.0").url("http://springdoc.org")));
 	}
