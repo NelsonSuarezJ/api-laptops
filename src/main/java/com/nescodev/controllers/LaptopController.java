@@ -5,6 +5,7 @@ import com.nescodev.services.LaptopService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,10 @@ import java.util.List;
 public class LaptopController {
 
     private LaptopService laptopService;
+    @Value("${mi.variable}")
+    private String entorno;
+    @Value("${mi.env}")
+    private String miVarEnv;
 
     public LaptopController(LaptopService laptopService) {
         this.laptopService = laptopService;
@@ -48,5 +53,7 @@ public class LaptopController {
     @DeleteMapping
     public void deleteAll(){
         laptopService.eliminarTodos();
+        System.out.println(entorno);
+        System.out.println(miVarEnv);
     }
 }

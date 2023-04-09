@@ -2,9 +2,11 @@ package com.nescodev.repositories;
 
 import com.nescodev.entities.Laptop;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile("dev")
 public class LoadData {
 
     private LaptopRepository laptopRepository;
